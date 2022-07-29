@@ -1,0 +1,9 @@
+Instrukcja działania
+
+1. Uruchamiamy plik create_keys.py, generowana jest tam para kluczy.
+
+2. Uruchamiamy plik sign_message.py, poprosi on nas o wpisanie wiadomości do zakodowania, w tle zajdą procesy kodujące naszą wiadomość. Wiadomość zapisana zostanie do pliku message.txt.
+
+3. Uruchamiamy plik verify_message.py, zweryfikuje on nam czy wiadomość jest zgodna.
+
+4. W celu sprawdzenia poprawności działania programu możemy ręcznie zmienić treść pliku message.txt, wówczas w kroku trzecim program powiadomi nas o nieprawidłowości danych.
