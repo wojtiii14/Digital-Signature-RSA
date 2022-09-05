@@ -1,5 +1,5 @@
 from Crypto.Signature import pkcs1_15
-from Crypto.Hash import SHA384
+from Crypto.Hash import SHA3_256
 from Crypto.PublicKey import RSA
 
 # Odczytujemy publiczny klucz
@@ -16,7 +16,7 @@ file_in = open("signature.pem", "rb")
 signature=file_in.read()
 file_in.close()
 
-h = SHA384.new(message)
+h = SHA3_256.new(message)
 
 # Porównujemy hash wiadomości z pliku z tym zawartym w podpisie
 
