@@ -1,12 +1,12 @@
 from Crypto.Signature import pkcs1_15
-from Crypto.Hash import SHA384
+from Crypto.Hash import SHA3_256
 from Crypto.PublicKey import RSA
 
 # Wprowadzanie wiadomości do zakodowania
 
 message = input('Wpisz swoją wiadomość: ').encode()
 key = RSA.import_key(open('private.key').read()) # Importujemy klucz prywatny z pliku
-h = SHA384.new(message) # Tworzymy hash dla naszej wiadomości
+h = SHA3_256.new(message) # Tworzymy hash dla naszej wiadomości
 
 # Podpisujemy naszą wiadomość
 
