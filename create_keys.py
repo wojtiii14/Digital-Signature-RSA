@@ -5,20 +5,20 @@ def create_keys():
 
     # Generowanie liczby zasilającej RSA w oparciu o utworzony przeze mnie TRNG
 
-    number = twitter.generate()
+#     number = twitter.generate()
 
-    if number < 85:
-        length = 1024
+#     if number < 85:
+#         length = 1024
 
-    elif (number >= 85) and (number < 170):
-        length = 2048
+#     elif (number >= 85) and (number < 170):
+#         length = 2048
 
-    else:
-        length = 4092
+#     else:
+#         length = 4092
 
     # Generowanie pary kluczy
 
-    key = RSA.generate(length)
+    key = RSA.generate(2048, twitter.getNumber)
 
     private_key = key.export_key()
     file_out = open("private.key", "wb")
