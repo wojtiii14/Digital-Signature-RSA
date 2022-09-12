@@ -1,6 +1,7 @@
 import snscrape.modules.twitter as sntwitter
 import pandas as pd
 import random
+import os
 
 query = "from: until:now since:2022-01-01"
 tweets = []
@@ -47,3 +48,7 @@ def generate():
 
     return int(result[random.randint(0, len(result) - 1)])
 
+number = generate()
+
+def getNumber(x):
+    return os.urandom(number)
